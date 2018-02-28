@@ -2,8 +2,8 @@
 	require("db.php");
 	require("functions.php");
 	if(isset($_COOKIE["id"]) && isset($_COOKIE['session'])){
-		$id=$_COOKIE["id"];
-		$pass=$_COOKIE["session"];
+		$id=mysql_real_escape_string($link,$_COOKIE["id"]);
+		$pass=mysql_real_escape_string($link,$_COOKIE["session"]);
 		$email=mysqli_real_escape_string($link,$_POST['email']);
 		$avatar=mysqli_real_escape_string($link,$_POST['avatar']);
 		$imgData = str_replace(' ','+',$avatar);

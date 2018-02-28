@@ -1,8 +1,8 @@
 <?
 	require("db.php");
 	if(isset($_COOKIE["id"]) && isset($_COOKIE['session'])){
-		$id=$_COOKIE["id"];
-		$pass=$_COOKIE["session"];
+		$id=mysql_real_escape_string($link,$_COOKIE["id"]);
+		$pass=mysql_real_escape_string($link,$_COOKIE["session"]);
 		$sql="SELECT id FROM users WHERE id = $id AND pass = \"$pass\"";
 		$res=$link->query($sql);
 		if(mysqli_num_rows($res)){
