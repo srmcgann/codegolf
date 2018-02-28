@@ -1,0 +1,7 @@
+# virtual config directories. moo -> ?i=moo
+RewriteEngine On
+Options -Indexes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?applet=$1 [L,QSA]
+

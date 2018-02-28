@@ -1,0 +1,16 @@
+if($formerUserID){
+        $sql="SELECT * FROM users WHERE id=$formerUserID";
+        $res=$link->query($sql);
+        $row=mysqli_fetch_assoc($res);
+        $formerName=$row['name'];
+        sql="SELECT bytes FROM applets WHERE id=$formerAppletID";
+        $res=$link->query($sql);
+        $row=mysqli_fetch_assoc($res);
+        $byteDiff=$bytes-$row['bytes'];
+        ?>
+        <div class="creditDiv">
+        	Remix of <a href="/a/<?=$formerAppletID?>">Applet #<?=$formerAppletID?></a> by <a href="/<?=$formerName?>"><?=$formerName?></a> (<?=($byteDiff>=0?"+":"").$byteDiff?>b)
+	</div>
+	<?
+}
+

@@ -1,0 +1,496 @@
+@font-face {
+    font-family: 'Square721';
+	src: url('TT0246M_.TTF') format('truetype'),
+		 url('TT0246M_.otf') format('opentype'),
+		 url('TT0246M_.woff') format('woff');
+}
+
+body{
+	margin:0;
+	background:#030b14 url(bg.png) no-repeat fixed;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100% 100%;
+	color:#6bc;
+	font-family:Square721,calibri,arial;
+	font-size:1.5em;
+	overflow-x:hidden;
+	tab-size:4;
+}
+
+#header{
+	width:100%;
+	height:65px;
+	border-bottom:1px solid #234;
+	background:rgba(15,25,35,.75);
+	position:fixed;
+	z-index:3;
+}
+
+#main{
+	position:absolute;
+	width:100%;
+	text-align:center;
+	margin-top:80px;
+}
+
+.featuredLink{
+	position:fixed;
+	font-size:35px;
+	color:#6bc;
+	text-shadow: 0 0 3px #000;
+	z-index:5;
+}
+
+.logoImage{
+	height:65px;
+}
+
+a{
+	color:#ff4;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+#loggedInRightMenu{
+	position:fixed;
+	right:0px;
+	font-size:0;
+	height:80px;
+	text-align:right;
+	z-index:20;
+}
+
+#rightMenu{
+	position:fixed;
+	right:30px;
+	font-size:0;
+	height:80px;
+	text-align:right;
+	margin-top:15px;
+	z-index:20;
+}
+
+.rightMenuLink{
+	cursor:pointer;
+	margin-left:20px;
+	margin-right:20px;
+	font-size:26px;
+}
+
+.userMenu{
+	cursor:pointer;
+	font-size:38px;
+}
+
+.menuText{
+	font-size:26px;
+	color:#888;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #123;
+	color:#6bc;
+	font-size:26px;
+	right:75px;
+    min-width: 250px;
+	border:1px solid #234;
+    padding: 0;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdownItem{
+	border-top:1px solid #234;
+	margin:0;
+	padding-top:5px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:5px;
+	cursor:pointer;
+}
+
+.dropdownItem:hover{
+	background:#6bc;
+	color:#234;
+}
+
+#loginScreen, #registerScreen, #preferencesScreen, #changePasswordScreen, #emailVerificationScreen, #emailConfirmScreen, #forcePasswordScreen{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,10,.95);
+	text-align:center;
+	z-index:10;
+	display:none;
+}
+
+input[type=text],[type=email],[type=password]{
+	background:#123;
+	color:#8ed;
+	text-align:center;
+	font-size:22px;
+	width:330px;
+	border-radius:5px;
+	border:1px solid #8ed;
+}
+
+button{
+	font-size:26px;
+	border-radius:2px;
+	background:#123;
+	border:1px solid #356;
+	padding-right:40px;
+	padding-left:40px;
+	color:#8ed;
+	cursor:pointer;
+}
+
+.inputLabel{
+	text-align:right;
+	padding-bottom:25px;
+	padding-right:10px;
+	padding-left:10px;
+	width:45%;
+}
+
+.inputCell{
+	text-align:center;
+	padding-bottom:25px;
+	padding-right:10px;
+	padding-left:10px;
+	width:55%;
+}
+
+.inputTable{
+	width:100%;
+}
+
+.submitTable{
+	width:100%;
+	margin-top:20px;
+}
+
+.inputDiv{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:680px;
+	border:1px solid #123;
+	border-radius:10px;
+	padding-top:20px;
+	padding-bottom:20px;
+	background:rgba(10,10,20,.9);
+}
+
+#loginResult{
+	color:#f00;
+	display:none;
+}
+
+#usernameAvailability{
+	display:none;
+}
+
+.menuAvatar{
+	width:65px;
+	height:65px;
+	margin-left:30px;
+	margin-bottom:-20px;
+}
+
+hr{
+	border:1px solid #123;
+}
+
+.highlighted{
+	color:#ff6;
+}
+
+.appletDiv{
+	margin-left:auto;
+	margin-right:auto;
+	border:1px solid #456;
+	width:75%;
+	max-width:75%;
+	min-width:580px;
+	margin-bottom:100px;
+}
+
+.appletLegend{
+	margin-left:auto;
+	margin-right:auto;
+	border:1px solid #456;
+	width:75%;
+	max-width:80%;
+	min-width:580px;
+	margin-top:-90px;
+	margin-bottom:100px;
+	background:rgba(20,20,50,.65);
+}
+
+.legendText{
+	font-size:.8em;
+	white-space: pre-line;
+	text-align:left;
+	padding:10px;
+	line-height:1.65em;
+}
+
+.function-wrap{
+	color:#888;
+	font-size:.9em;
+	float:left;
+}
+
+.code-input{
+	width:50%;
+	background:rgba(40,40,40,.65);
+	font-family:"Lucida Console", Monaco, monospace;
+	white-space: pre-line;
+    word-break: break-all;
+	text-align:left;
+	padding:15px;
+    max-height: 20em;
+	box-sizing: border-box;
+	display:block;
+	float:left;
+}
+
+.appletCode{	
+	background: transparent;
+    border:0;
+    color: white;
+    outline:0;
+    font-size:.8em;
+    padding:0;
+	width:100%;
+	min-height:120px;
+	max-height:250px;
+	margin-top:-100px;
+	resize:none;
+	box-sizing: border-box;
+	display:block;
+}
+
+.appletIframe{
+	width:50%;
+	overflow-y: hidden;
+	border:0;
+	float:left;
+	display:block;
+}
+
+code{
+	display:block;
+}
+
+.appletAvatar{
+	width:25%;
+	display:block;
+	float:left;
+}
+
+.clear{
+	clear:both;
+}
+
+.appletName{
+	color:#48a;
+	font-style:italic;
+}
+
+.appletName:hover{
+	text-decoration:underline;
+}
+
+.userInfoTable{
+	border-collapse: collapse;
+	float:left;
+	font-size: 16px;
+	font-size: 1.5vw;
+	color:#aa8;
+	border-bottom:1px solid #345;
+	width:100%;
+	height:8vh;
+}
+
+.userInfoTable td{
+	border-left:1px solid #345;
+	border-right:1px solid #345;
+}
+
+.toolbar{
+	border-bottom:1px solid #456;
+	width:100%;
+	display:block;
+	float:left;
+	font-size:.7em;
+}
+
+.toolbarText{
+	display:flex;
+	justify-content:space-between;
+	padding-right:20px;
+	padding-left:20px;
+	margin-top:1%;
+}
+
+.assetChoice{
+	display:block;
+	float:left;
+}
+
+#asset{
+	border:1px solid #aaa;
+}
+.rate_widget {
+    overflow:   visible;
+    padding:    2px;
+    position:   relative;
+    width:      240px;
+    height:     32px;
+}
+.ratings_clouds {
+    background: url(grey_star.png) no-repeat;
+    float:      left;
+    padding:    2px;
+	background-size:100% 100%;
+    width:      36px;
+    height:     28px;
+	cursor: pointer;
+}
+.ratings_vote {
+    background: url(blue_star.png) no-repeat;
+	background-size:100% 100%;
+}
+.ratings_over {
+    background: url(green_star.png) no-repeat;
+	background-size:100% 100%;
+}
+#popCell{
+	padding-left:8px;
+	font-size:24px;
+	color:#eee;
+}
+
+.shareBox{
+	position:absolute;
+	text-align:center;
+	display:none;
+	height:1.2em;
+	font-size:1.2em;
+	margin-top:0px;
+	left:60%;"
+}
+
+#landingDiv{
+	position:absolute;
+	text-align:center;
+	padding:10px;
+	width:100%;
+	margin-top:80px;
+	display:none;
+}
+
+.newAppletButton{
+	border-radius:10px;
+	margin-left:auto;
+	margin-right:auto;
+	background:#07526d;
+	color:#eff;
+	width:320px;
+	padding:15px;
+	border:1px solid #678;
+	cursor:pointer;
+}
+
+.NewAppletButtonGraphic{
+	width:35px;
+	display:block;
+	float:left;
+	margin-left:10px;
+	margin-bottom:5px;
+}
+
+.creditDiv{
+	width:100%;
+	background:rgba(40,40,40,.65);
+	text-align:center;
+	border-bottom:1px solid #456;
+}
+
+.commentsDiv{
+	width:100%;
+	background:rgba(20,20,50,.65);
+	border-left:1px solid #456;	
+	border-right:1px solid #456;	
+	border-bottom:1px solid #456;	
+}
+
+.commentsDivInner{
+	text-align:left;
+	padding:10px;
+}
+
+.navMenu{
+	position:fixed;
+	font-size:20px;
+	width:100%;
+	text-align:center;
+	margin-top:21px;
+	color:#6bc;
+	z-index:4;
+}
+
+.navMenuButton{
+	margin-left:10px;
+	margin-right:10px;
+	background:#334;
+	border-radius:5px;
+	border:1px solid #888;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.navMenuButton:hover{
+	text-decoration:none;
+}
+
+.navMenuButtonSelected{
+	margin-left:10px;
+	margin-right:10px;
+	background:#0f8;
+	color:black;
+	border-radius:5px;
+	border:2px solid white;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.navMenuButtonSelected:hover{
+	text-decoration:none;
+}
+
+.deleteButton{
+	color:red;
+	font-size:.8em;
+	float:right;
+	display:none;
+	margin-top:-30px;
+}
