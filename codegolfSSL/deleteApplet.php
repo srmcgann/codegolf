@@ -1,7 +1,7 @@
 <?
 	require("functions.php");
-	$userID=mysql_real_escape_string($link,$_COOKIE['id']);
-	$pass=mysql_real_escape_string($link,$_COOKIE['session']);
+	$userID=mysqli_real_escape_string($link,$_COOKIE['id']);
+	$pass=mysqli_real_escape_string($link,$_COOKIE['session']);
 	$sql="SELECT * FROM users WHERE id=$userID AND pass=\"$pass\"";
 	$res=$link->query($sql);
 	if(mysqli_num_rows($res)){
